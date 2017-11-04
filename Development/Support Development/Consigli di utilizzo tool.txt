@@ -1,0 +1,36 @@
+1) Per potersi muovere liberamente nelle nostre aree
+- Spostamento in altezza -> Rotella mouse
+- Rotazione -> Con il mouse: tenere prenuta rotellina centrale e ruotare
+- Spostamento spaziale (avanti/indietro) -> Tenere premuto control e con il mouse andare avanti e indietro 
+
+2) Per fare in modo, dopo aver posizionato un certo oggetto, di deselezionare il piazzamento di oggetti simili
+- Premere Esc
+
+3) Per creare una conversazione
+- File->New->Conversation
+- Per ritrovare tutte le nostre conversazioni andare, subito sopra Area Contents, su C.. 
+- Per concatenare un dialogo tra giocatore e npc è importante capire che l'editor segnala:
+      in Rosso -> frasi degli NPC
+      in Blu -> frasi del giocatore
+- Una volta creata una linea di testo, per fare in modo che vi sia una risposta ad essa, bisogna cliccarvi
+con il destro e premere add; in questo modo si avrà la possibilità di inserire una replica al dialogo
+precedente. I dialoghi vengono composti tutti quanti in questo modo, con queste varie concatenazioni
+
+4) Per assegnare una certa conversazione già creata ad una creatura
+- Andare su Area Contents, e trovare la creatura desiderata
+- Cliccandovi col tasto destro aprirne le proprietà
+- Andare sulla sezione Basics->Conversation e selezionare tra le conversazioni già create quella desiderata
+
+5) Per passare da ambiente esterno ad ambiente interno tramite una porta
+- Per passare tra le varie aree del gioco un metodo molto semplice è quello di fare affidamento alle porte
+- Creare una porta nell'area esterna (può essere una porta a se stante o far parte di un edificio già predefinito)
+- Aprirne le proprietà, cambiarne il tag con un nome facilmente riconoscibile (es porta1in) (Basics->Tag)
+- Andare su Transitions e mettere Transition to a door, e in linked to bisogna mettere il tag "complementare" (es porta1out)
+- Spostarsi sull'area intera, creare una porta e selezionarne le proprietà
+- Cambiare il tag opportunamente (es porta1out)
+- Come prima, fare Transition to a door e in linked to il tag della porta "speculare" (es porta1in)
+Già il collegamento potrebbe funzionare in questo modo, ma in realtà concludendo qui c'è il rischio di crash o di errori
+Questo perchè non abbiamo fatto il bake delle aree, quindi:
+- IMPORTANTE: Affinchè funzioni fare il bake di tutte le aree con File->Bake all areas
+
+
